@@ -55,7 +55,7 @@ export class DoctorService {
     }
   }
 
-  getDoctorDetails(docID: any): Promise<any> {
+  getDetails(docID: any): Promise<any> {
     console.log(docID);
 
     return new Promise((resolve) => {

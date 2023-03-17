@@ -11,6 +11,7 @@ export class PatientService {
   account: any;
 
   ipfs: any;
+  
 
   addprogress:boolean = false;
   added:boolean = false
@@ -25,7 +26,6 @@ export class PatientService {
     this.contract = blockchainService.getContract();
     
     this.getAcccount();
-
     this.ipfs = ipfsService.getIPFS();
   }
 
@@ -53,7 +53,7 @@ export class PatientService {
         });
     });
   }
-
+ 
   getAcccount() {
     console.log('geting Account...');
     let getacc = setInterval(() => {
