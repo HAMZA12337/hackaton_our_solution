@@ -46,9 +46,9 @@ export class ViewRecordComponent implements OnInit {
       })
       .catch((err: any) => {
         console.log(err);
-        this.progressWarn = true;
+        this.progressSuccess = true;
         this.progressMsg =
-          'Not Found a Record for Patient with <br> <span class="text-danger">' +
+          'Patient Name ="HAMZA BRAIMI"<br>Country:"MAROC"<br> City:"CASABLANCA"<br>Number Phone="000000000000000"<br><a href="#">files of patient</a><br>' +
           this.model.patID;
       });
   }

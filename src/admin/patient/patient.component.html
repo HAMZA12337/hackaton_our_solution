@@ -1,10 +1,15 @@
 <div class="container-fluid">
-  <!-- <div class="container mb-4">
+  <div class="container mb-4">
     <form [noValidate]="false" #docForm="ngForm" (ngSubmit)="onSubmit()">
       <h3 class="h3 my-3">Add Patient to the Network</h3>
       <div class="row form-row">
+        <div class="usr-image d-flex justify-content-center flex-column align-items-center mt-3 mb-5 object-fit">
+        
+        </div>
         <div class="col-12 col-sm-6">
+          
           <div class="form-group">
+           
             <label>
               First Name
               <sup class="fas fa-asterisk fw-normal text-danger" style="font-size: 8px;"></sup>
@@ -45,9 +50,17 @@
         </div>
         <div class="col-12 col-sm-6">
           <div class="form-group">
-            <label>State</label>
+            <label>Country</label>
             <input [(ngModel)]="model.state" name="state" id="state" type="text" class="form-control"
               placeholder="state" />
+          </div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <div class="usr-image d-flex justify-content-center flex-column align-items-center mt-3 mb-5 object-fit">
+         
+            <div class="img-c mb-3 w-200  mt-3 col-md-6 d-flex flex-column">
+              <input class="img-chooser form-control" type="file" id="formFile">
+            </div>
           </div>
         </div>
       </div>
@@ -55,9 +68,9 @@
         Add Patient
       </button>
     </form>
-  </div> -->
+  </div>
   <div class="container">
-    NOT AVAILABLE
+    
     <br />
     
   </div>

@@ -14,8 +14,10 @@ export class PatientComponent implements OnInit {
     phone: '123456789',
     city: 'city',
     state: 'state',
+    imageHash: '',
   };
-
+  image_url: any;
+  imageCompressedUrl: string = '';
   show: boolean = false;
   msg_text: string = '';
   warn: boolean = false;

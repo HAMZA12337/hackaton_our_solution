@@ -3,7 +3,7 @@
     <div class="h3">Patient Consultation</div>
     <form class="patient__id" #patForm = "ngForm" (ngSubmit)="onPatIDSubmit()" >
       <input [(ngModel)]="model.patID" name="patID" #patID type="text" class="form-control"
-        placeholder="Patient ID (0x00000000000000000000000000000000000000000)">
+        placeholder="Consultation ID (0x00000000000000000000000000000000000000000)">
       <button type="submit" class="btn btn-primary">Consult</button>
     </form>
   </div>
