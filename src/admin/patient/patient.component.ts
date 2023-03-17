@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PatientService } from '../services/patient.service';
+import { DoctorService } from 'src/admin/services/doctor.service';
 
 @Component({
   selector: 'app-patient',
@@ -23,7 +24,7 @@ export class PatientComponent implements OnInit {
 
   ipfs: any;
 
-  constructor(private patientService: PatientService) {}
+  constructor(private patientService: PatientService, private ds: DoctorService) {}
 
   ngOnInit(): void {}
 
@@ -32,7 +33,7 @@ export class PatientComponent implements OnInit {
     this.msg_text = "Adding Patient to the Network..."
     console.log(this.model);
     this.checkAddProgress()
-    this.patientService.addPatient(this.model.patID, this.model);
+    this.ds.add(this.model.patID, this.model);
   }
 
   checkAddProgress(){

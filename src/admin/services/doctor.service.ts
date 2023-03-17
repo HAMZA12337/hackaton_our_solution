@@ -75,7 +75,7 @@ export class DoctorService {
     })
   }
 
-  addDoctor(docId: string, data: any): Promise<any> {
+  add(docId: string, data: any): Promise<any> {
     return new Promise((resolve, reject) => {
       this.bs.getContract().then(c => {
         this.bs.getCurrentAcount().then(a => {
