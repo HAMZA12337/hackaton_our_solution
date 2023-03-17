@@ -53,7 +53,7 @@ export class AddComponent implements OnInit {
 
     let data = this.model;
 
-    this.ds.addDoctor(this.model.docID, data).then((r: any) => {
+    this.ds.add(this.model.docID, data).then((r: any) => {
       this.success = true
       this.msg_text = 'Data added to IPFS...';
       this.msg_text += '<br>User Added to the Blockchain';
