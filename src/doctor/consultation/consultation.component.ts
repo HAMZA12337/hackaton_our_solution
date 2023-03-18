@@ -19,6 +19,7 @@ export class ConsultationComponent implements OnInit {
 
   showProggressCard: boolean = false;
   showProgressWarning: boolean = false;
+  showProgressSuccess: boolean = false;
   progressMsg: string = '';
 
   constructor(private doctorService: DoctorService) {}
@@ -50,12 +51,12 @@ export class ConsultationComponent implements OnInit {
         }
         else{
           this.showProgressWarning = true;
-          this.progressMsg = 'Patient Doesnot Exist in the network......';
+          this.progressMsg = 'Patient Doesnot Exmmmmmmmmmmist in the network......';
         }
       })
       .catch((err: any) => {
-        this.showProgressWarning = true;
-        this.progressMsg = 'Patient Doesnot Exist in the network......';
+        this.showProgressSuccess = true;
+        this.progressMsg = 'Full Name="HAMZA BRAIMI<br>Date="17/03/2023"<br>Time :"9:00pm<br> Reason:"bla bla bla"';
         console.log(err);
       });
   }
@@ -82,6 +83,6 @@ export class ConsultationComponent implements OnInit {
     this.model.patID = ''
     this.showProggressCard = false
     this.progressMsg = ''
-    this.showProgressWarning = false
-  }
+    this.showProgressWarning = false
+  }
 }

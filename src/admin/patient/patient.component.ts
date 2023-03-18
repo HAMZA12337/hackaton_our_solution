@@ -13,8 +13,9 @@ export class PatientComponent implements OnInit {
     fName: 'test_name',
     lName: 'test_name',
     phone: '123456789',
-    city: 'city',
-    state: 'state',
+    Weight: '65',
+    Files: [],
+    docID:''
   };
 
   show: boolean = false;

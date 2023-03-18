@@ -1,15 +1,13 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DoctorService } from 'src/admin/services/doctor.service';
 
 @Component({
-  selector: 'doctor-view',
-  templateUrl: './view.component.html',
-  styleUrls: ['./view.component.sass'],
+  selector: 'app-appiontment',
+  templateUrl: './appiontment.component.html',
+  styleUrls: ['./appiontment.component.sass']
 })
-export class ViewComponent implements OnInit {
+export class AppiontmentComponent implements OnInit {
+
   model: any = {
     acID: '',
   };
@@ -29,7 +27,7 @@ export class ViewComponent implements OnInit {
     imageHash: '',
   };
 
-  DoctorDetails: any = [];
+  PatientDetails: any = [];
 
   loaded: boolean = false;
   loadComplete: boolean = false;
@@ -42,7 +40,7 @@ export class ViewComponent implements OnInit {
   constructor(private doctorService: DoctorService) {
     this.progressMsg = 'Loading Doctor Accounts From Blockchain'
 
-    this.DoctorDetails = doctorService.DoctorDetails
+    this.PatientDetails = doctorService.DoctorDetails
   }
 
   ngOnInit(): void {
@@ -50,14 +48,14 @@ export class ViewComponent implements OnInit {
   }
 
   loadDrDetails() {
-    console.log("heiiiiiiiiiiiiiii");
-    this.DoctorDetails = []
+    
+    this.PatientDetails = []
     for (var i = 0; i <= this.Doctors.length; i++) {
       if (this.Doctors[i])
-      console.log("sssssssssssssssssssss222")
+      
         this.doctorService.getDetails(this.Doctors[i]).then((data: any) => {
-          this.DoctorDetails.push(data)
-          console.log("sssssssssssssssssssss"+this.DoctorDetails)
+          this.PatientDetails.push(data)
+          console.log(this.PatientDetails)
         });
     }
     this.progressMsg = ''
@@ -70,7 +68,7 @@ export class ViewComponent implements OnInit {
     this.progressMsg = ''
     this.loadComplete = false
     console.log("i am here--------------");
-    if (this.DoctorDetails.length >= 1) {
+    if (this.PatientDetails.length >= 1) {
       this.showProgressCard = false
       return 0
     }
@@ -90,4 +88,5 @@ export class ViewComponent implements OnInit {
     })
 
   }
+ 
 }

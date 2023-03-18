@@ -28,8 +28,15 @@
               required />
           </div>
         </div>
+        <div class="col-12 col-sm-6">
+          <div class="form-group">
+            <label>Email<sup class="fas fa-asterisk fw-normal text-danger" style="font-size: 8px;"></sup></label>
+            <input [(ngModel)]="model.lName" name="lName" id="lname" type="text" class="form-control"
+              placeholder="last name" />
+          </div>
+        </div>
 
-        <div class="col-12">
+        <div class="col-12 col-sm-6">
           <div class="form-group">
             <label>Patient Id<sup class="fas fa-asterisk fw-normal text-danger" style="font-size: 8px;"></sup></label>
             <input [(ngModel)]="model.patID" name="docID" id="accid" type="text" class="form-control"
@@ -38,17 +45,24 @@
         </div>
         <div class="col-12 col-sm-6">
           <div class="form-group">
-            <label>City<sup class="fas fa-asterisk fw-normal text-danger" style="font-size: 8px;"></sup></label>
-            <input [(ngModel)]="model.city" name="city" id="city" type="text" class="form-control" placeholder="city"
-              required />
+            <label>Doctor Id<sup class="fas fa-asterisk fw-normal text-danger" style="font-size: 8px;"></sup></label>
+            <input [(ngModel)]="model.docID" name="docID" id="accid" type="text" class="form-control"
+              placeholder="patient account id" required />
           </div>
         </div>
         <div class="col-12 col-sm-6">
           <div class="form-group">
-            <label>State</label>
-            <input [(ngModel)]="model.state" name="state" id="state" type="text" class="form-control"
-              placeholder="state" />
+            <label>Weight<sup class="fas fa-asterisk fw-normal text-danger" style="font-size: 8px;"></sup></label>
+            <input [(ngModel)]="model.Weight" name="Weight" id="Weight" type="text" class="form-control" placeholder="Weight"
+              required />
           </div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <label for="inputGroupFile01">File</label>
+          <div class="input-group mb-3">
+            <input type="file"  [(ngModel)]="model.Files"  class="form-control" id="inputGroupFile01">
+          </div>
+         
         </div>
       </div>
       <button type="submit" id="btn" class="btn btn-primary mb-3">
